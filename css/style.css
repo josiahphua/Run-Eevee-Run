@@ -9,7 +9,9 @@ body {
   width: 700px;
   height: 500px;
   margin: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  z-index: 0; }
   #game #background {
     width: 5076px;
     height: 500px;
@@ -39,7 +41,8 @@ body {
   width: 100px;
   position: absolute;
   top: 200px;
-  right: 250px; }
+  right: 250px;
+  z-index: 999; }
   #berry-point img {
     width: 100%; }
 
@@ -50,7 +53,8 @@ body {
   width: 175px;
   position: absolute;
   top: 200px;
-  right: 100px; }
+  right: 100px;
+  z-index: 999; }
   #berry-time img {
     width: 100%; }
 
