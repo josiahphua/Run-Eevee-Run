@@ -1,120 +1,89 @@
 * {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 body {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 #game {
   width: 700px;
   height: 500px;
   margin: auto;
-  overflow: hidden;
-}
-#game #background {
-  width: 5076px;
-  height: 500px;
-  border: 1px solid black;
-  margin: auto;
-  background: url("/images/blue.png") repeat-x;
-  animation: slide 30s linear infinite;
-}
+  overflow: hidden; }
+  #game #background {
+    width: 5076px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    background: url("../images/blue.png") repeat-x;
+    animation: slide 30s linear infinite; }
 
 #eevee {
   width: 100px;
   height: 100px;
   position: absolute;
   top: 400px;
-  left: 500px;
-}
-#eevee img {
-  width: 100%;
-}
+  left: 500px; }
+  #eevee img {
+    width: 100%; }
 
 .runIn {
-  animation: runIn 5s;
-}
+  animation: runIn 5s; }
 
 @keyframes runIn {
   0% {
-    left: 100px;
-  }
+    left: 100px; }
   100% {
-    left: 500px;
-  }
-}
+    left: 500px; } }
 #berry-point {
   width: 100px;
   position: absolute;
   top: 200px;
-  right: 250px;
-}
-#berry-point img {
-  width: 100%;
-}
+  right: 250px; }
+  #berry-point img {
+    width: 100%; }
 
 .bpMove {
-  animation: moveBPoint 15s infinite;
-}
+  animation: moveBPoint 15s infinite; }
 
 #berry-time {
   width: 175px;
   position: absolute;
   top: 200px;
-  right: 100px;
-}
-#berry-time img {
-  width: 100%;
-}
+  right: 100px; }
+  #berry-time img {
+    width: 100%; }
 
 .btMove {
-  animation: moveBTime 5s infinite;
-}
+  animation: moveBTime 5s infinite; }
 
 .jump {
-  animation: jump 500ms;
-}
+  animation: jump 500ms; }
 
 @keyframes jump {
   0% {
-    top: 400px;
-  }
+    top: 400px; }
   30% {
-    top: 150px;
-  }
+    top: 150px; }
   70% {
-    top: 150px;
-  }
+    top: 150px; }
   100% {
-    top: 400px;
-  }
-}
+    top: 400px; } }
 @keyframes slide {
   0% {
-    transform: translate3d(0, 0, 0);
-  }
+    transform: translate3d(0, 0, 0); }
   100% {
-    transform: translate3d(-1692px, 0, 0);
-  }
-}
+    transform: translate3d(-1692px, 0, 0); } }
 @keyframes moveBPoint {
   0% {
-    right: 250px;
-  }
+    right: 250px; }
   100% {
-    right: 2800px;
-  }
-}
+    right: 2800px; } }
 @keyframes moveBTime {
   0% {
-    right: 100px;
-  }
+    right: 100px; }
   100% {
-    right: 1500px;
-  }
-}
+    right: 1500px; } }
 #score {
   color: whitesmoke;
   position: absolute;
@@ -122,31 +91,25 @@ body {
   left: 480px;
   width: 100px;
   height: 100px;
-  font-size: 1.5rem;
-}
+  font-size: 1.5rem; }
 
 .timer {
   position: absolute;
   top: 0;
   left: 850px;
-  font-size: 1.5rem;
-}
-.timer #countdown {
-  color: whitesmoke;
-}
+  font-size: 1.5rem; }
+  .timer #countdown {
+    color: whitesmoke; }
 
 #thunderstone {
   width: 50px;
   position: absolute;
   top: 200px;
-  right: 275px;
-}
-#thunderstone img {
-  width: 100%;
-}
+  right: 275px; }
+  #thunderstone img {
+    width: 100%; }
 
 .TS {
-  animation: moveBPoint 60s infinite;
-}
+  animation: moveBPoint 60s infinite; }
 
 /*# sourceMappingURL=style.css.map */
