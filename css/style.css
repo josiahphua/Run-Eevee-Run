@@ -9,7 +9,7 @@ body {
 
 #game {
   width: 700px;
-  height: 600px;
+  height: 500px;
   margin: auto;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@ body {
   height: 100px;
   position: absolute;
   top: 400px;
-  left: 730px;
+  left: 500px;
 }
 #eevee img {
   width: 100%;
@@ -42,7 +42,7 @@ body {
     left: 100px;
   }
   100% {
-    left: 730px;
+    left: 500px;
   }
 }
 #berry-point {
@@ -75,14 +75,6 @@ body {
 
 .jump {
   animation: jump 500ms;
-}
-
-.moveBPoint {
-  animation: moveBPoint 30s infinite;
-}
-
-.moveBTime {
-  animation: moveBTime 30s infinite;
 }
 
 @keyframes jump {
@@ -127,7 +119,7 @@ body {
   color: whitesmoke;
   position: absolute;
   top: 0;
-  left: 650px;
+  left: 480px;
   width: 100px;
   height: 100px;
   font-size: 1.5rem;
@@ -136,7 +128,7 @@ body {
 .timer {
   position: absolute;
   top: 0;
-  left: 1000px;
+  left: 850px;
   font-size: 1.5rem;
 }
 .timer #countdown {
@@ -147,7 +139,7 @@ body {
   width: 50px;
   position: absolute;
   top: 200px;
-  right: 400px;
+  right: 275px;
 }
 #thunderstone img {
   width: 100%;

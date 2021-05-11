@@ -39,6 +39,7 @@ window.addEventListener("keydown", event => {
         jump(eevee);
     }
 });
+let point = 5;
 
 let checkPoints = setInterval(function(){
     let eeveeTop = parseInt(window.getComputedStyle(eevee).getPropertyValue("top"));
@@ -46,24 +47,24 @@ let checkPoints = setInterval(function(){
     let BPRight = parseInt(window.getComputedStyle(berryPoint).getPropertyValue("right"));
     let TSRight = parseInt(window.getComputedStyle(thunderstone).getPropertyValue("right"));
 
-    if (eeveeTop <= 200 && BPRight < 1175 && BPRight > 1050){
+    if (eeveeTop <= 200 && BPRight < 835 && BPRight > 720){
         berryPoint.classList.remove("bpMove");
         berryPoint.style.display = "none";
         // call function to add show total score in the div?
-        addPoint(5);   
+        addPoint(point);   
     }
-    if (eeveeTop <= 200 && BTRight < 1175 && BTRight > 1050){
+    if (eeveeTop <= 200 && BTRight < 835 && BTRight > 720){
         berryTime.classList.remove("btMove");
         berryTime.style.display = "none";
         time+= 5;
         // call function to add time * multiplier to score?
     }
-    if (eeveeTop <= 200 && TSRight < 1175 && TSRight > 1050){
+    if (eeveeTop <= 200 && TSRight < 835 && TSRight > 720){
         thunderstone.classList.remove("bpMove");
         thunderstone.style.display = "none";
         imgJolteon.src = "/images/jolteon.gif";
         // call function to add show total score in the div?
-        addPoint(10);   
+        addPoint(point*2);   
     }
 
 }, 10);
@@ -90,8 +91,17 @@ function addPoint(points){
 })();
 
 
+function gameEnd(){
+    eevee.style.display = "none";
+    berryPoint.style.display = "none";
+    berryTime.style.display = "none";
+    console.log(berryPoint.style.display);
+}
 
-
+setTimeout(() => {
+gameEnd()
+    
+}, 30000);
 
 
 
