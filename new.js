@@ -1,34 +1,23 @@
 
 // Assigning variables to main parts of game.
+let game = document.getElementById("game");
 let eevee = document.getElementById("eevee");
-
 let berryPoint = document.getElementById("berry-point");
-
 let thunderstone = document.getElementById("thunderstone")
-
 let berryTime = document.getElementById("berry-time");
-
 let imgBP = document.getElementById("BP");
-
 let imgBT = document.getElementById("BT");
-
 let imgJolteon = document.getElementById("jolteon");
-
 let totalScore = document.getElementById("scoreCount");
-
 let $time = document.getElementById("countdown");
-
-let overlay = document.getElementsByClassName("overlay")
-
+let overlay = document.getElementById("overlay");
+let textBox = document.getElementById("text-box");
+let point = 5;
 let time;
-
 let scoreCount = [];
-
 let overallScore =[];
 
-
-// This is for 20s countdown.
-
+// Functions.
 
 let jump = ()=>  {
     eevee.classList.remove("runIn");
@@ -42,9 +31,6 @@ let jump = ()=>  {
     }, 500)
 }
 
-
-let point = 5;
-
 // Timer
 function countDown() {
     $time.textContent = time + " second" + (time == 1 ? "" : "s")
@@ -52,19 +38,17 @@ function countDown() {
 // this 2000 means 2000miliseconds, can write a function to drop the time
 };
 
-
 function gameEnd(){
-    eevee.style.display = "none";
-    berryPoint.style.display = "none";
-    berryTime.style.display = "none";
-    totalScore.style.display = "none";
-
+    // eevee.style.display = "none";
+    // berryPoint.style.display = "none";
+    // berryTime.style.display = "none";
+    // totalScore.style.display = "none";
+    // thunderstone.style.display = "none";
+    game.style.display = "none";
+    overlay.style.display = "block";
+    textBox.style.display = "block";
+    textBox.innerText = "Click on Charmander to go to the next level"
 }
-
-// create function to carry time over from previous stage.
-// maybe set another variable to add time left and new stage time
-// yups. Do I have a fail mechanic?
-
 
 // this function is created to check for time up.
 function timeUp(time) {
@@ -80,26 +64,31 @@ function timeUp(time) {
     }
 }
 
+// this plays out a new game. 
 let newGame = (level) => {
+    time = 25 - (level * 5);
+    game.style.display = "block";
+    overlay.style.display = "none";
+    textBox.style.display = "none";
     let checkPoints = setInterval(function(){
         let eeveeTop = parseInt(window.getComputedStyle(eevee).getPropertyValue("top"));
-        let BTRight = parseInt(window.getComputedStyle(berryTime).getPropertyValue("left"));
-        let BPRight = parseInt(window.getComputedStyle(berryPoint).getPropertyValue("left"));
-        let TSRight = parseInt(window.getComputedStyle(thunderstone).getPropertyValue("left"));
+        let BTLeft = parseInt(window.getComputedStyle(berryTime).getPropertyValue("left"));
+        let BPLeft = parseInt(window.getComputedStyle(berryPoint).getPropertyValue("left"));
+        let TSLeft = parseInt(window.getComputedStyle(thunderstone).getPropertyValue("left"));
     
-        if (eeveeTop <= 200 && BPRight < 200 && BPRight > 100){
+        if (eeveeTop <= 200 && BPLeft < 200 && BPLeft > 100){
             berryPoint.classList.remove("bpMove");
             berryPoint.style.display = "none";
             // call function to add show total score in the div?
             addPoint(point);   
         }
-        if (eeveeTop <= 200 && BTRight < 200 && BTRight > 100){
+        if (eeveeTop <= 200 && BTLeft < 200 && BTLeft > 100){
             berryTime.classList.remove("btMove");
             berryTime.style.display = "none";
-            time+= 5;
+            addPoint(-5);
             // call function to add time * multiplier to score?
         }
-        if (eeveeTop <= 200 && TSRight < 200 && TSRight > 100){
+        if (eeveeTop <= 200 && TSLeft < 200 && TSLeft > 100){
             thunderstone.classList.remove("TS");
             thunderstone.style.display = "none";
             imgJolteon.src = "./images/jolteon.gif";
@@ -128,7 +117,14 @@ let newGame = (level) => {
             jump(eevee);
         }
     });
-
+    countDown();
 
 }
 
+overlay.addEventListener("click", function(){
+    newGame(1);
+
+    setTimeout(() => {
+        gameEnd();
+    }, 20000);
+});

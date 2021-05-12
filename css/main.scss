@@ -7,6 +7,7 @@ body{
     overflow:hidden;
 }
 #game{
+    display: none;
     width: 700px;
     height: 500px;
     margin: auto;
@@ -107,11 +108,14 @@ body{
 
 @keyframes moveBPoint{
     0% {left: 2500px;}
-    100% {left: -100px;}
+    100% {left: -1000px;}
 }
 @keyframes moveBTime{
     0% {left: 750px;}
-    100% {left: -175px;}
+    25% {left: 375px; top: 200px;}
+    50% {left: 0px; top: 100px;}
+    75% {left: -375; top: 150px;}
+    100% {left: -750px;}
 }
 
 
@@ -148,4 +152,12 @@ body{
 
 .TS{
     animation: moveBPoint 1s infinite;
+}
+
+#overlay {
+    margin: auto;
+}
+
+#text-box{
+    margin: auto;
 }

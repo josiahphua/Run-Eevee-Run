@@ -8,6 +8,7 @@ body {
 }
 
 #game {
+  display: none;
   width: 700px;
   height: 500px;
   margin: auto;
@@ -108,15 +109,27 @@ body {
     left: 2500px;
   }
   100% {
-    left: -100px;
+    left: -1000px;
   }
 }
 @keyframes moveBTime {
   0% {
     left: 750px;
   }
+  25% {
+    left: 375px;
+    top: 200px;
+  }
+  50% {
+    left: 0px;
+    top: 100px;
+  }
+  75% {
+    left: -375;
+    top: 150px;
+  }
   100% {
-    left: -175px;
+    left: -750px;
   }
 }
 #score {
@@ -151,6 +164,14 @@ body {
 
 .TS {
   animation: moveBPoint 1s infinite;
+}
+
+#overlay {
+  margin: auto;
+}
+
+#text-box {
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
