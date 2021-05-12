@@ -30,7 +30,7 @@ body{
     height: 100px;
     position: absolute;
     top: 400px;
-    left: 50px;
+    left: 150px;
 
     img{
         width: 100%;
@@ -41,8 +41,8 @@ body{
 }
 
 @keyframes runIn{
-    0%{left: 100px;}
-    100%{left: 500px;}
+    0%{left: 0px;}
+    100%{left: 150px;}
 }
 
 #berry-point{
@@ -58,14 +58,14 @@ body{
 }
 
 .bpMove{
-    animation: moveBPoint 15s infinite;
+    animation: moveBPoint 5s infinite;
 }
 
 #berry-time{
     width: 175px;
     position: absolute;
     top: 200px;
-    right: 100px;
+    left: 1750px;
     z-index: 999;
 
     img{
@@ -80,14 +80,6 @@ body{
 .jump{
     animation: jump 500ms;
 }
-
-// .moveBPoint{
-//     // animation: moveBPoint 30s infinite;
-// }
-
-// .moveBTime{
-//     // animation: moveBTime 30s infinite;
-// }
 
 @keyframes jump {
     0% {
@@ -114,12 +106,12 @@ body{
 }
 
 @keyframes moveBPoint{
-    0% {right: 250px;}
-    100% {right: 2800px;}
+    0% {left: 2500px;}
+    100% {left: -100px;}
 }
 @keyframes moveBTime{
-    0% {right: 100px;}
-    100% {right: 1500px;}
+    0% {left: 1750px;}
+    100% {left: -175px;}
 }
 
 
@@ -127,7 +119,7 @@ body{
     color: whitesmoke;
     position: absolute;
     top: 0;
-    left: 480px;
+    left: 100px;
     width: 100px;
     height: 100px;
     font-size: 1.5rem;
@@ -135,7 +127,7 @@ body{
 .timer{
     position: absolute;
     top: 0;
-    left: 850px;
+    left: 450px;
     font-size: 1.5rem;
 
     #countdown{ 
@@ -155,5 +147,5 @@ body{
 }
 
 .TS{
-    animation: moveBPoint 60s infinite;
+    animation: moveBPoint 1s infinite;
 }
