@@ -16,6 +16,7 @@ let point = 5;
 let time;
 let scoreCount = [];
 let overallScore =[];
+let level = 1;
 
 // Functions.
 
@@ -65,11 +66,12 @@ function timeUp(time) {
 }
 
 // this plays out a new game. 
-let newGame = (level) => {
-    time = 25 - (level * 5);
+let newGame = (num) => {
+    time = 25 - (num * 5);
     game.style.display = "block";
     overlay.style.display = "none";
     textBox.style.display = "none";
+
     let checkPoints = setInterval(function(){
         let eeveeTop = parseInt(window.getComputedStyle(eevee).getPropertyValue("top"));
         let BTLeft = parseInt(window.getComputedStyle(berryTime).getPropertyValue("left"));
@@ -121,10 +123,18 @@ let newGame = (level) => {
 
 }
 
+
+// Start & stop Mechanic
 overlay.addEventListener("click", function(){
-    newGame(1);
+    newGame(level);
 
     setTimeout(() => {
         gameEnd();
-    }, 20000);
+        levelUp();
+    }, 10000);
 });
+
+// Level mechanic?
+function levelUp(){
+    level++;
+}
