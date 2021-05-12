@@ -97,7 +97,7 @@ let checkPoints = setInterval(function(){
     if (eeveeTop <= 200 && TSRight < 200 && TSRight > 100){
         thunderstone.classList.remove("TS");
         thunderstone.style.display = "none";
-        imgJolteon.src = "/images/jolteon.gif";
+        imgJolteon.src = "./images/jolteon.gif";
         // call function to add show total score in the div?
         addPoint(point*2);   
     }
