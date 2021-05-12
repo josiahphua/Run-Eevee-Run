@@ -55,6 +55,15 @@ let overallScore =[];
     
 // }
 
+// This is for 20s countdown.
+setTimeout(() => {
+
+
+
+
+    console.log("Hi");
+}, 20000);
+
 
 let jump = ()=>  {
     eevee.classList.remove("runIn");
@@ -121,7 +130,7 @@ function addPoint(points){
 // Timer
 (function countDown() {
     $time.textContent = time + " second" + (time == 1 ? "" : "s")
-    if (time-- > 0) setTimeout(countDown, 2000) 
+    if (time-- > 0) setTimeout(countDown, 1000) 
 // this 2000 means 2000miliseconds, can write a function to drop the time
 })();
 
@@ -139,7 +148,7 @@ function gameEnd(){
 
 // this function is created to check for time up.
 function timeUp(time) {
-    if (time){
+    if (time == 0){
         overallScore.push(totalScore.innerText)
         let overallSum = overallScore.reduce(function(a,b){
             return a+b;
@@ -147,5 +156,8 @@ function timeUp(time) {
 
         // saving value of overall score as an int.
         let overallScoreInt = overallSum;
+        console.log(overallScoreInt);
     }
 }
+
+

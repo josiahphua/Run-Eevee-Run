@@ -59,14 +59,14 @@ body {
 }
 
 .bpMove {
-  animation: moveBPoint 15s infinite;
+  animation: moveBPoint 5s infinite;
 }
 
 #berry-time {
   width: 175px;
   position: absolute;
   top: 200px;
-  left: 1750px;
+  left: 750px;
   z-index: 999;
 }
 #berry-time img {
@@ -113,7 +113,7 @@ body {
 }
 @keyframes moveBTime {
   0% {
-    left: 1750px;
+    left: 750px;
   }
   100% {
     left: -175px;

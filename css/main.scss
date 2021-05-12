@@ -65,7 +65,7 @@ body{
     width: 175px;
     position: absolute;
     top: 200px;
-    left: 1750px;
+    left: 750px;
     z-index: 999;
 
     img{
@@ -110,7 +110,7 @@ body{
     100% {left: -100px;}
 }
 @keyframes moveBTime{
-    0% {left: 1750px;}
+    0% {left: 750px;}
     100% {left: -175px;}
 }
 
