@@ -52,7 +52,7 @@ body {
   width: 100px;
   position: absolute;
   top: 200px;
-  right: 250px;
+  left: 750px;
   z-index: 999;
 }
 #berry-point img {
@@ -64,9 +64,9 @@ body {
 }
 
 #pokeball {
-  width: 175px;
+  width: 100px;
   position: absolute;
-  top: 200px;
+  top: 400px;
   left: 750px;
   z-index: 999;
 }
@@ -106,7 +106,7 @@ body {
 }
 @keyframes moveBPoint {
   0% {
-    left: 2500px;
+    left: 750px;
   }
   100% {
     left: -1000px;
@@ -115,18 +115,6 @@ body {
 @keyframes movePball {
   0% {
     left: 750px;
-  }
-  25% {
-    left: 375px;
-    top: 200px;
-  }
-  50% {
-    left: 0px;
-    top: 100px;
-  }
-  75% {
-    left: -375;
-    top: 150px;
   }
   100% {
     left: -750px;
@@ -156,7 +144,7 @@ body {
   width: 50px;
   position: absolute;
   top: 200px;
-  right: 275px;
+  left: 750px;
 }
 #thunderstone img {
   width: 100%;

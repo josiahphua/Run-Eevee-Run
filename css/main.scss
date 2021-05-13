@@ -50,7 +50,7 @@ body{
     width: 100px;
     position: absolute;
     top: 200px;
-    right: 250px;
+    left: 750px;
     z-index: 999;
 
     img{
@@ -63,9 +63,9 @@ body{
 }
 
 #pokeball{
-    width: 175px;
+    width: 100px;
     position: absolute;
-    top: 200px;
+    top: 400px;
     left: 750px;
     z-index: 999;
 
@@ -83,38 +83,27 @@ body{
 }
 
 @keyframes jump {
-    0% {
-      top: 400px;
-    }
-    30% {
-      top: 150px;
-    }
-    70% {
-      top: 150px;
-    }
-    100% {
-      top: 400px;
-    }
+    0% {top: 400px;}
+    30% {top: 150px;}
+    70% {top: 150px;}
+    100% {top: 400px;}
   }
 
 @keyframes slide{
-    0% {
-        transform: translate3d(0,0,0);
-    }
-    100% {
-        transform: translate3d(-1692px,0,0);
-    }
+    0% {transform: translate3d(0,0,0);}
+    100% {transform: translate3d(-1692px,0,0);}
 }
 
 @keyframes moveBPoint{
-    0% {left: 2500px;}
+    0% {left: 750px;}
     100% {left: -1000px;}
 }
 @keyframes movePball{
     0% {left: 750px;}
-    25% {left: 375px; top: 200px;}
-    50% {left: 0px; top: 100px;}
-    75% {left: -375; top: 150px;}
+    // 10% {left: 675px; top: 250px;}
+    // 25% {left: 375px; top: 200px;}
+    // 50% {left: 0px; top: 300px;}
+    // 75% {left: -375px; top: 250px;}
     100% {left: -750px;}
 }
 
@@ -143,7 +132,7 @@ body{
     width: 50px;
     position: absolute;
     top: 200px;
-    right: 275px;
+    left: 750px;
 
     img{
         width: 100%;

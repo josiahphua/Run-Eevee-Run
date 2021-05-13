@@ -17,10 +17,7 @@ let scoreCount = [];
 let overallScore =[];
 let level = 1;
 
-let eeveeTop = parseInt(window.getComputedStyle(eevee).getPropertyValue("top"));
-let PBLeft = parseInt(window.getComputedStyle(pokeBall).getPropertyValue("left"));
-let BPLeft = parseInt(window.getComputedStyle(berryPoint).getPropertyValue("left"));
-let TSLeft = parseInt(window.getComputedStyle(thunderstone).getPropertyValue("left"));
+
 
 // Functions.
 
@@ -71,21 +68,30 @@ let newGame = (num) => {
     overlay.style.display = "none";
     textBox.style.display = "none";
 
+    
     let point = num * 2;
 
     let checkPoints = setInterval(function(){
+        let eeveeTop = parseInt(window.getComputedStyle(eevee).getPropertyValue("top"));
+        let PBLeft = parseInt(window.getComputedStyle(pokeBall).getPropertyValue("left"));
+        let BPLeft = parseInt(window.getComputedStyle(berryPoint).getPropertyValue("left"));
+        let TSLeft = parseInt(window.getComputedStyle(thunderstone).getPropertyValue("left"));
+
         if (eeveeTop <= 200 && BPLeft < 200 && BPLeft > 100){
             berryPoint.classList.remove("bpMove");
             berryPoint.style.display = "none";
             // call function to add show total score in the div?
             addPoint(point);   
         }
-        
+        if (eeveeTop > 300 && eeveeTop <= 400 && PBLeft < 200 && PBLeft > 100){
+            pokeBall.classList.add("pbMove");
+            pokeBall.style.display = "none";
+            addPoint(point * -1);
+        }
         if (eeveeTop <= 200 && TSLeft < 200 && TSLeft > 100){
             thunderstone.classList.remove("TS");
             thunderstone.style.display = "none";
             imgJolteon.src = "./images/jolteon.gif";
-            
             addPoint(point*2);   
         }
     
@@ -122,15 +128,33 @@ overlay.addEventListener("click", function(){
         newGame(level);
         setTimeout(() => {
             gameEnd();
-            levelUp();
+            // levelUp();
         }, parseInt((25-(level *5)) * 1000));
+        levelUp();
     } else if (level == 2){
-
-
+        gPokeball();
+        newGame(level);
+        setTimeout(() => {
+            gameEnd();
+            // levelUp();
+        }, parseInt((25-(level *5)) * 1000));
+        levelUp();
     } else if (level == 3){
-
+        gPokeball();
+        newGame(level);
+        setTimeout(() => {
+            gameEnd();
+            // levelUp();
+        }, parseInt((25-(level *5)) * 1000));
+        levelUp();
     } else if (level == 4){
-
+        gPokeball();
+        newGame(level);
+        setTimeout(() => {
+            gameEnd();
+            // levelUp();
+        }, parseInt((25-(level *5)) * 1000));
+        levelUp();
     } else if (level >=5) {
         textBox.innerText = "Thank you for playing all 4 levels!"
     }
@@ -147,12 +171,3 @@ function gPokeball() {
         pokeBall.style.display = "block";
     }, 1000);
 }
-
-// Berry Time has been changed to an obstacle. Plan to remove this for stage 1.
-        /*
-        if (eeveeTop <= 200 && BTLeft < 200 && BTLeft > 100){
-            berryTime.classList.add("btMove");
-            berryTime.style.display = "none";
-            addPoint(point * -1);
-
-        } */
