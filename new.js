@@ -44,7 +44,7 @@ function gameEnd(){
     game.style.display = "none";
     overlay.style.display = "block";
     textBox.style.display = "block";
-    textBox.innerText = "Click on Charmander to go to the next level"
+    textBox.innerText = "Click on the Eevee to go to the next level"
 }
 
 // this function is created to check for time up.
@@ -93,6 +93,9 @@ let newGame = (num) => {
             thunderstone.style.display = "none";
             imgJolteon.src = "./images/jolteon.gif";
             addPoint(point*2);   
+            setTimeout(() => {
+                imgJolteon.src = "./images/shiny-eevee.gif"
+            }, 5000);
         }
     
     }, 10);
@@ -128,19 +131,19 @@ overlay.addEventListener("click", function(){
         newGame(level);
         setTimeout(() => {
             gameEnd();
-            // levelUp();
         }, parseInt((25-(level *5)) * 1000));
+        removeTS();
         levelUp();
     } else if (level == 2){
-        gPokeball();
+        gTS();
         newGame(level);
         setTimeout(() => {
             gameEnd();
-            // levelUp();
         }, parseInt((25-(level *5)) * 1000));
         levelUp();
     } else if (level == 3){
         gPokeball();
+        gTS();
         newGame(level);
         setTimeout(() => {
             gameEnd();
@@ -149,6 +152,7 @@ overlay.addEventListener("click", function(){
         levelUp();
     } else if (level == 4){
         gPokeball();
+        gTS();
         newGame(level);
         setTimeout(() => {
             gameEnd();
@@ -170,4 +174,16 @@ function gPokeball() {
         pokeBall.classList.add("pbMove");
         pokeBall.style.display = "block";
     }, 1000);
+}
+
+function gTS (){
+    let generateTS = setInterval(function(){
+        thunderstone.classList.add("pbMove");
+        thunderstone.style.display = "block";
+    }, 10000);
+}
+
+function removeTS(){
+    thunderstone.classList.remove("pbMove");
+    thunderstone.style.display = "none";
 }
