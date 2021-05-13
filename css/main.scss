@@ -62,7 +62,7 @@ body{
     animation: moveBPoint 5s infinite;
 }
 
-#berry-time{
+#pokeball{
     width: 175px;
     position: absolute;
     top: 200px;
@@ -74,8 +74,8 @@ body{
     }
 }
 
-.btMove{
-    animation: moveBTime 5s infinite;
+.pbMove{
+    animation: movePball 5s infinite;
 }
 
 .jump{
@@ -110,7 +110,7 @@ body{
     0% {left: 2500px;}
     100% {left: -1000px;}
 }
-@keyframes moveBTime{
+@keyframes movePball{
     0% {left: 750px;}
     25% {left: 375px; top: 200px;}
     50% {left: 0px; top: 100px;}
@@ -155,7 +155,6 @@ body{
 }
 
 #overlay {
-    margin: auto;
     width: 200px;
 }
 
