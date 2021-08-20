@@ -1,5 +1,7 @@
 # Run-Eevee-Run
 
+Play the game here[https://josiahphua.github.io/Run-Eevee-Run/]
+
 So Eevee will run and then have to jump too. 
 
 Animation for background and placement of Eevee, Thunderstone, and Berries successful.
