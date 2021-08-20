@@ -1,6 +1,6 @@
 # Run-Eevee-Run
 
-Play the game here[https://josiahphua.github.io/Run-Eevee-Run/]
+Play the game [here](https://josiahphua.github.io/Run-Eevee-Run/)
 
 So Eevee will run and then have to jump too. 
 
